@@ -7,10 +7,10 @@ const config = {
         preload: preload,
         create: create,
         update: update
+        // [Example1]
     }
 };
 
-// scene: [Example1]
 var game = new Phaser.Game(config);
 
 function preload () {
@@ -18,7 +18,8 @@ function preload () {
   }
 
 function create () {
-  this.add.sprite(400, 300, 'tomato');
+  const tomato = this.add.sprite(400, 300, 'tomato');
+  tomato.setScale(.08);
 }
 
 function update () {
